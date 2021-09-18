@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Estudiante } from '../models/estudiante';
 import { EstudianteService } from '../servicios/estudiante.service';
 
@@ -15,6 +16,7 @@ export class EstudiantesComponent implements OnInit {
   constructor(private estudianteService: EstudianteService) { }
 
   ngOnInit(): void {
+    
     this.estudianteService.getClientes().subscribe(
       estudiantes => this.estudiantes = estudiantes
     );

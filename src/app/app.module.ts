@@ -22,7 +22,8 @@ const routes: Routes = [
   {path: 'directivas', component: DirectivaComponent},
   {path: 'clientes', component: ClientesComponent},
   {path: 'estudiantes', component: EstudiantesComponent},
-  {path: 'form-estudiante', component: FormEstudianteComponent}
+  {path: 'form-estudiante', component: FormEstudianteComponent},
+  {path: 'form-estudiante/:id', component: FormEstudianteComponent}
 
 ];
 
