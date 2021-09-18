@@ -1,0 +1,25 @@
+<button type="button"  class="btn btn-primary my-3" [routerLink]="['/form-estudiante']" >Agregar un nuevo estudiante</button>
+<div class="card border-primary mb-3" >
+    <div class="card-header">Estudiantes</div>
+    <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Estudiantes</h5>
+    
+      <table class="table table-bordered table-striped" >
+        <thead>
+            <tr>
+                <th>Codigo estudiante </th>
+                <th>Nombre </th>
+                <th>Apellido</th>
+                <th>Programa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estudiante of estudiantes">
+                <td>{{estudiante.codigo}}</td>
+                <td>{{estudiante.nombre}}</td>
+                <td>{{estudiante.apellido}}</td>
+                <td>{{estudiante.programa}}</td>                
+            </tr>
+        </tbody>
+    </table>
+    </div>

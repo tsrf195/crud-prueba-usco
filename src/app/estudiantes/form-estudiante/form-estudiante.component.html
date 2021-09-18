@@ -1,0 +1,19 @@
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Codigo</label>
+        <input type="number" readonly class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="estudiante.codigo" name="codigo">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="estudiante.nombre" name="nombre">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Apellido</label >
+      <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="estudiante.apellido" name="apellido">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Programa</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="estudiante.programa" name="programa">
+      </div>
+    <button type="submit" class="btn btn-primary" (click)="crearEstudiante()">Submit</button>
+  </form>
