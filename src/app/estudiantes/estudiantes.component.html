@@ -20,7 +20,8 @@
                 <td>{{estudiante.nombre}}</td>
                 <td>{{estudiante.apellido}}</td>
                 <td>{{estudiante.programa}}</td>    
-                <td> <button type="button"  style="margin-right:5pt;" class="btn btn-success my-3" [routerLink]="['/form-estudiante',estudiante.codigo]">Editar</button> <button type="button"  class="btn btn-danger my-3">Eliminar</button></td>            
+                <td> <button type="button"  style="margin-right:5pt;" class="btn btn-success my-3" [routerLink]="['/form-estudiante',estudiante.codigo]">Editar</button>
+                 <button type="button"  class="btn btn-danger my-3" (click)=eliminarEstudiante(estudiante.codigo)>Eliminar</button></td>            
             </tr>
         </tbody>
     </table>

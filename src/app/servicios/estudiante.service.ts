@@ -23,4 +23,10 @@ export class EstudianteService {
   buscarEstudiantePorId(id: number): Observable<Estudiante>{
     return this.http.get<Estudiante>(this.urlFindById+"/"+id);
   };
+  actualizarEstudiante(estudiante: Estudiante): Observable<Estudiante>{
+    return this.http.put<Estudiante>(this.urlEndPoint+"/"+estudiante.codigo,estudiante);
+  }
+  eliminarEstudiante(id: number): Observable<any>{
+    return this.http.delete<any>(this.urlEndPoint+"/"+id);
+  }
 }

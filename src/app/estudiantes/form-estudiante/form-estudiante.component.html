@@ -1,7 +1,7 @@
 <form>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Codigo</label>
-        <input type="number" readonly class="form-control" id="codigo"  [(ngModel)]="estudiante.codigo" *ngIf="estudiante.codigo != null" name="codigo">
+        <input type="number" readonly class="form-control" id="codigo"  [(ngModel)]="estudiante.codigo"  name="codigo">
       </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Nombre</label>
@@ -16,5 +16,5 @@
         <input type="text" class="form-control" id="programa" [(ngModel)]="estudiante.programa" name="programa">
       </div>
     <button type="submit" class="btn btn-primary" (click)="crearEstudiante()" *ngIf="estudiante.codigo == null" >Guardar</button>
-    <button type="submit" class="btn btn-primary"  *ngIf="estudiante.codigo != null">Actualizar</button>
+    <button type="submit" class="btn btn-primary" (click)="actualizarEstudiante()" *ngIf="estudiante.codigo != null">Actualizar</button>
   </form>
