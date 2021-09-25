@@ -14,6 +14,8 @@ import { Cliente } from './clientes/cliente';
 import { HttpClientModule } from '@angular/common/http';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { FormEstudianteComponent } from './estudiantes/form-estudiante/form-estudiante.component';
+import { CursoComponent } from './curso/curso.component';
+import { FormCursoComponent } from './curso/form-curso/form-curso.component';
 
 
 
@@ -23,7 +25,10 @@ const routes: Routes = [
   {path: 'clientes', component: ClientesComponent},
   {path: 'estudiantes', component: EstudiantesComponent},
   {path: 'form-estudiante', component: FormEstudianteComponent},
-  {path: 'form-estudiante/:id', component: FormEstudianteComponent}
+  {path: 'form-estudiante/:id', component: FormEstudianteComponent},
+  {path: 'cursos',component:CursoComponent},
+  {path: 'form-curso', component: FormCursoComponent},
+  {path: 'form-curso/:id', component: FormCursoComponent}
 
 ];
 
@@ -36,6 +41,8 @@ const routes: Routes = [
     ClientesComponent,
     EstudiantesComponent,
     FormEstudianteComponent,
+    CursoComponent,
+    FormCursoComponent,
   ],
   imports: [
     BrowserModule,

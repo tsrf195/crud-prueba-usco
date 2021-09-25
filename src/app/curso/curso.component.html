@@ -1,0 +1,25 @@
+<div class="card border-primary mb-3" >
+    <div class="card-header">Cursos</div>
+    <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Cursos</h5>
+    
+    <button type="submit" class="btn btn-success my-3"  [routerLink]="['/form-curso']"   >Agregar Curso</button>
+      <table class="table table-bordered table-striped" >
+        <thead>
+            <tr>
+                <th>Nombre profesor</th>
+                <th>Nombre del curso</th>
+                <th>Codigo del salon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curso of cursos">
+                <td>{{curso.id_profesor.nombre}} {{curso.id_profesor.apellido}}</td>
+                <td>{{curso.nombre}}</td>
+                <td>{{curso.id_salon.id}}</td>
+                <td> <button type="button"  style="margin-right:5pt;" class="btn btn-success my-3" >Editar</button>
+                 <button type="button"  class="btn btn-danger my-3" >Eliminar</button></td>            
+            </tr>
+        </tbody>
+    </table>
+    </div>

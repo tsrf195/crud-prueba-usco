@@ -13,6 +13,7 @@ export class FormEstudianteComponent implements OnInit {
   public estudiante: Estudiante = new Estudiante();
 
   public error: String[];
+  
   constructor(private estudianteService: EstudianteService, private router: Router,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {

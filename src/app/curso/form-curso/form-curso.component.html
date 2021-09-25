@@ -1,0 +1,19 @@
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Codigo</label>
+        <input type="number" readonly class="form-control" id="codigo"  [(ngModel)]="curso.id"  name="codigo">
+      </div>
+    <div class="mb-3">
+      <label  class="form-label">Nombre</label>
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="curso.id_profesor" name="id_profesor">
+        <option *ngFor="let profesor of profesores" [value]="profesor">{{profesor.nombre}} {{profesor.apellido}}</option>
+      </select>
+    </div>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="curso.id_profesor" name="id_profesor">
+      <option selected>Seleccione un profesor</option>
+      <option *ngFor="let profesor of profesores" [value]="profesor.codigo">{{profesor.nombre}} {{profesor.apellido}}</option>
+    </select>
+    
+    <button type="submit" class="btn btn-primary"  (click)="crearCurso()">Guardar</button>
+    <button type="submit" class="btn btn-primary" >Actualizar</button>
+  </form>
